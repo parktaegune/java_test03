@@ -11,6 +11,14 @@ This is a test.
 <br>{{message+'1234'}}
 <br>
 <span v-bind:title="날짜">마우스를 가까이 가져오세요.</span>
+<br>
+<span v-if="seen">볼 수 있다.</span>
+<span v-else>볼수 없다.</span>>
+<br>
+내가 공부하고 싶은 언어
+<ul>
+<li v-for="todo in todos">{{todo.text}}</li>>
+</ul>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
@@ -18,7 +26,15 @@ This is a test.
  el: '#app',   
  data: {
     message: 'Cloud!',
-    data:'오늘 날짜:' + new Data().toLocaleString()
+    data:'오늘 날짜:' + new Data().toLocaleString(),
+    seen: true,
+        todos:[
+            {text: 'Javascript'},
+            {text: 'Node.js'},
+            {text: 'Vue.js'},
+            {text: 'Nuxt.js'},
+
+        ]
  }
             
         });
